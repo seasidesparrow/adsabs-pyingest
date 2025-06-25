@@ -183,7 +183,7 @@ class DataCiteParser(BaseXmlToDictParser):
             for i in self._array(a.get('nameIdentifier')):
                 if 'ORCID' == i.get('@nameIdentifierScheme') or \
                         'http://orcid.org' == i.get('@schemeURI'):
-                    aff = aff + ' <ORCID>' + i.get('#text') + '</ORCID>'
+                    aff = aff + ' <ID system="ORCID">' + i.get('#text') + '</ID>'
             aaffils.append(aff.strip())
         if not authors:
             raise MissingAuthorsException("No authors found for")
@@ -233,7 +233,7 @@ class DataCiteParser(BaseXmlToDictParser):
             for i in self._array(a.get('nameIdentifier')):
                 if 'ORCID' == i.get('@nameIdentifierScheme') or \
                         'http://orcid.org' == i.get('@schemeURI'):
-                    aff = aff + ' <ORCID>' + i.get('#text') + '</ORCID>'
+                    aff = aff + ' <ID system="ORCID">' + i.get('#text') + '</ID>'
             caffils.append(aff.strip())
 
         # for now we are ignoring <dates> until it's clear what goes in there...

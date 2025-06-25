@@ -1,7 +1,7 @@
 {
     "abstract": "XML example of all DataCite Metadata Schema v4.1 properties.", 
     "affiliations": [
-        "DataCite <ORCID>0000-0001-5000-0007</ORCID>"
+        "DataCite <ID system=\"ORCID\">0000-0001-5000-0007</ID>"
     ], 
     "authors": [
         "Miller, Elizabeth"
